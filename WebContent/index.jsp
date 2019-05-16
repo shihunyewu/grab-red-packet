@@ -5,23 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.js"></script>
-<!-- 
-<script type="text/javascript">
- $(document).ready(function(){
-	 var max = 30000;
-	 for(var i = 0; i < max; i++){
-		 $.post({
-			 url:"/userRedPacket/grapRedPacket.do?redPacketid=l&userid=" + i,
-			 success:function(result){
-			 }
-		 });
-	 }
- });
-</script>
- -->
+
 </head>
 <body>
-<h1>抢红包</h1>
+<a  href="userRedPacket/grab_packet"><h1>抢红包</h1></a>
 </body>
 </html>

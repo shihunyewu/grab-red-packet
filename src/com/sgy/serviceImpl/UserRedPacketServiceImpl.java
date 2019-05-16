@@ -28,13 +28,14 @@ public class UserRedPacketServiceImpl implements UserRedPacketService {
 	@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
 	public int grapRedPacket(Long redPacketId, Long userId) {
 		// 获取红包信息
+//		RedPacket redPacket = redPacketDao.getRedPacketForUpdate(redPacketId);
 		RedPacket redPacket = redPacketDao.getRedPacket(redPacketId);
 		if(redPacket.getStock() > 0) {
 			redPacketDao.decreaseRedPacket(redPacketId);
 			// 生成抢红包信息
-			UserRedPacket userRedPacket =new UserRedPacket() ;
-			userRedPacket.setRedPacketid(redPacketId);
-			userRedPacket.setUserid(userId);
+			UserRedPacket userRedPacket =new UserRedPacket();
+			userRedPacket.setRedPacketId(redPacketId);
+			userRedPacket.setUserId(userId);
 			userRedPacket.setAmount(redPacket.getUnitAmount());
 			userRedPacket.setNote("抢红包" + redPacketId);
 			// 插入抢红包信息

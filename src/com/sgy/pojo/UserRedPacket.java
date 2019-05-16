@@ -6,9 +6,9 @@ import java.sql.Timestamp;
 public class UserRedPacket implements Serializable {
 	private static final long serialVersionUID = -5617482065991830143L ;
 	private Long id;
-	private Long redPacketid;
-	private Long userid;
-	private Double amount ;
+	private Long redPacketId;
+	private Long userId;
+	private Double amount;
 	private Timestamp grabTime;
 	private String note;
 	
@@ -18,17 +18,18 @@ public class UserRedPacket implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Long getRedPacketid() {
-		return redPacketid;
+	
+	public Long getRedPacketId() {
+		return redPacketId;
 	}
-	public void setRedPacketid(Long redPacketid) {
-		this.redPacketid = redPacketid;
+	public void setRedPacketId(Long redPacketId) {
+		this.redPacketId = redPacketId;
 	}
-	public Long getUserid() {
-		return userid;
+	public Long getUserId() {
+		return userId;
 	}
-	public void setUserid(Long userid) {
-		this.userid = userid;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 	public Double getAmount() {
 		return amount;

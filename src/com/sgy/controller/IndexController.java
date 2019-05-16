@@ -1,10 +1,13 @@
 package com.sgy.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+@Controller
 @RequestMapping("/")
 public class IndexController {
-	@RequestMapping("/index")
+
+	
+	@RequestMapping("/")
 	public String grapRedPacket(){
 		return "index";
 	}
